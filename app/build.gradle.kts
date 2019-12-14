@@ -30,7 +30,7 @@ android {
         setTargetCompatibility(JavaVersion.VERSION_1_8)
     }
 }
-
+apply(plugin = "com.android.application")
 dependencies {
     implementation(Config.Libs.Firebase.core)
     implementation(Config.Libs.Androidx.design)
@@ -54,12 +54,15 @@ dependencies {
     // Used for FirestorePagingActivity
     implementation(Config.Libs.Androidx.paging)
 
+
+
     // The following dependencies are not required to use the Firebase UI library.
     // They are used to make some aspects of the demo app implementation simpler for
     // demonstrative purposes, and you may find them useful in your own apps; YMMV.
     implementation(Config.Libs.Misc.permissions)
     implementation(Config.Libs.Misc.butterKnife)
     implementation(Config.Libs.Androidx.constraint)
+
     annotationProcessor(Config.Libs.Misc.butterKnifeCompiler)
     debugImplementation(Config.Libs.Misc.leakCanary)
     debugImplementation(Config.Libs.Misc.leakCanaryFragments)
@@ -68,3 +71,4 @@ dependencies {
 }
 
 apply(plugin = "com.google.gms.google-services")
+
